@@ -1,0 +1,49 @@
+.other-issue-area{
+    background: #fff;
+}
+
+.swiper-container {
+    min-height: 250px;
+  }
+  
+  .swiper-slide {
+    background: #f1f1f1;
+    color: #000;
+    text-align: center;
+    line-height: 300px;
+  }
+
+  .ellipsis-3{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+.single-recent-blog-post .thumb {
+  height: 260px;
+}
+.single-recent-blog-post .tags{
+  margin: 20px 0;
+}
+.single-recent-blog-post .tags li {
+  display: inline-block;
+  border: 1px solid #eee;
+  font-weight: 400;
+  font-size: 12px;
+  color: #222;
+  padding: 4px 12px;
+  margin-right: 5px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.single-recent-blog-post .tags li:hover {
+  background: #f8b600;
+  color: white;
+}
+

@@ -1,0 +1,48 @@
+::ng-deep .object-fit-cover{
+  object-fit: cover;
+}
+::ng-deep .swiper-button-next{
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+  margin-right: -10px;
+  border: 1px solid #000;
+}
+::ng-deep .swiper-button-next:after{
+  font-size: 20px;
+  color: #000;
+}
+::ng-deep .swiper-button-prev{
+  background-color: white;
+  padding: 25px;
+  border-radius: 25px;
+  margin-left: -10px;
+  border: 1px solid #000;
+}
+::ng-deep .swiper-button-prev:after{
+  font-size: 20px;
+  color: #000;
+}
+
+/* =================================== */
+/*  Angular Material Custom Styles
+/* =================================== */
+::ng-deep .mat-calendar-body-cell-content {
+  border-radius: 5px !important;
+}
+
+::ng-deep .mat-calendar-body-today {
+  border-color: rgba(248, 182, 0, .8) !important;
+  border-width: 2px !important;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1366px) {
+  .home-form{
+    top: 7%;
+  }
+}
+
+
+.home-about-area{
+  background-color: #fff;
+}

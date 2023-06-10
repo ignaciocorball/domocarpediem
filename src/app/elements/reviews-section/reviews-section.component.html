@@ -1,0 +1,35 @@
+<section class="testimonial-area section-gap">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-8">
+                <div class="title text-center">
+                    <h1 class="mb-10">Reseñas de nuestros clientes</h1>
+                    <p>Puedes leer todos los comentarios haciendo click en: <a href="https://www.booking.com/hotel/cl/carpe-diem-patagonia.es.html#tab-reviews" style="font-weight: 600;">Booking Reviews</a></p>
+                </div>
+            </div>
+        </div>
+        <swiper #swiperReviews [config]="config2" slideActiveClass="swiper-active" class="mySwiper" id="reviewSwiper">
+            <ng-template swiperSlide *ngFor="let review of reviewsSlides">
+                <div (click)="openURL('https://www.booking.com/hotel/cl/carpe-diem-patagonia.es.html#tab-reviews')" class="single-testimonial item d-flex flex-row">
+                    <div class="thumb">
+                        <img *ngIf="review.img" class="img-rounded img s-64" src="{{review.img}}" alt="{{review.name}} - {{review.description}}">
+                        <div *ngIf="!review.img" class="img-letter">
+                            {{review.name.charAt(0).toUpperCase()}}
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <p matTooltip="{{review.description}}" class="ellipsis-3">{{review.description}}</p>
+                        <h4>{{review.country}} {{review.name}}</h4>
+                        <div class="star">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</section>

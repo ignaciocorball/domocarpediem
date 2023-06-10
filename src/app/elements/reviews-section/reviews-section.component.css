@@ -1,0 +1,22 @@
+.ellipsis-3{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+#reviewSwiper{
+  height: 250px;
+}
+  .swiper-pagination{
+    
+  }
+  ::ng-deep .swiper-pagination-bullet{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 0 !important;
+  }
+  ::ng-deep .swiper-pagination-bullet-active{
+    background-color: #f5a623 !important;
+  }

@@ -1,0 +1,27 @@
+.booking-award{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003B95;
+    height: 250px;
+    z-index: -2;
+    position: relative;
+    padding-bottom: 20px;
+}
+.booking-award img{
+    height: 100%;
+}
+.booking-confetti img{
+    position: absolute;
+    z-index: -1;
+}
+.conffeti-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0 !important;
+ }
+ ::ng-deep #tsparticles {
+    width: 100%;
+    height: 100%;
+  }
