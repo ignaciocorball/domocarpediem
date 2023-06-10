@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "~swiper/swiper-bundle";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.img-letter{
+    width: 64px;
+    height: 64px;
+    background: #f5a623;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+}
+.img-rounded{
+    border-radius: 50%;
+}
+.s-64{
+    width: 64px;
+    height: 64px;
+}

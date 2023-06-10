@@ -1,0 +1,41 @@
+<section class="other-issue-area section-gap">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-70 col-lg-9">
+                <div class="title text-center">
+                    <h1 class="mb-10">Siguenos en Instagram!</h1>
+                    <p>
+                        No te pierdas las últimas novedades que te estan esperando en 
+                        <a href="https://www.instagram.com/domocarpediem/" target="_blank" style="font-weight: 600;">Carpe Diem Patagonia</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <swiper #swiperRef [config]="config" modules={[Pagination]} slideActiveClass="swiper-active" class="mySwiper" id="instagramPostsSwiper">
+            <ng-template swiperSlide *ngFor="let post of instagramPostsSlides">
+                <div (click)="openUrl(post.href)" class="single-other-issue">
+                    <div class="single-recent-blog-post item">
+                        <div class="thumb">
+                            <img class="img-fluid object-fit-cover" [src]="post.img" alt="{{post.title}} - {{post.description}}">
+                        </div>
+                        <div class="details">
+                            <div class="tags">
+                                <ul>
+                                    <li *ngFor="let tag of post.tags">
+                                        {{tag}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="{{post.href}}">
+                                <h4>{{post.title}}</h4>
+                            </a>
+                            <p class="ellipsis-3">{{post.description}}</p>
+                            <h6 class="date">{{post.date}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <div class="swiper-pagination"></div>
+        </swiper>
+    </div>	
+</section>

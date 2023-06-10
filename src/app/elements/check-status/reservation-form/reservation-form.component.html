@@ -1,0 +1,29 @@
+<form class="form-wrap" [formGroup]="reservationForm">
+    <h4 class="text-dark text-center mb-30">Reserva tu habitación</h4>
+    <mat-form-field class="d-block">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingresa tu nombre" formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="d-block">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Ingresa tu correo" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="d-block">
+        <mat-label>Ingresa un rango de fechas</mat-label>
+        <mat-date-range-input [rangePicker]="picker" formGroupName="dateRange">
+          <input matStartDate placeholder="Llegada" formControlName="startDate">
+          <input matEndDate placeholder="Salida" formControlName="endDate">
+        </mat-date-range-input>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+    </mat-form-field>
+    <mat-form-field class="d-block">
+        <mat-label>Adultos</mat-label>
+        <input matInput placeholder="Máximo: 3" [value]="2" [min]="1" [max]="3" type="number" formControlName="adults">
+    </mat-form-field>
+    <mat-form-field class="d-block">
+        <mat-label>Habitaciones</mat-label>
+        <input matInput [value]="1" type="number" [disabled]="true" formControlName="rooms">
+    </mat-form-field>
+    <a (click)="saveReservation()" href="javascript:void(0)" class="primary-btn text-uppercase">Reservar</a>
+</form>
